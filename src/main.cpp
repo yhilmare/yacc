@@ -14,10 +14,14 @@ extern "C" {
      * 语法分析功能的工具
     */
     void grammar_parse();
+    /**
+     * 统计词频的词法分析工具
+    */
+    void word_count_func(int, char **);
 }
 
 int main(int argc, char ** args) {
     cout << "Hello, world" << endl;
-    grammar_parse();
+    word_count_func(argc, args);
     return 0;
 }

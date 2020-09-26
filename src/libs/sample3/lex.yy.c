@@ -465,8 +465,8 @@ int yy_flex_debug = 0;
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 "sample3.l"
-#line 2 "sample3.l"
+#line 1 "simple_sentence_word.l"
+#line 2 "simple_sentence_word.l"
     /**
     带有语法分析功能的词法分析工具
     */
@@ -662,7 +662,7 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
     
-#line 13 "sample3.l"
+#line 13 "simple_sentence_word.l"
 
 #line 668 "lex.yy.c"
 
@@ -750,13 +750,13 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 14 "sample3.l"
+#line 14 "simple_sentence_word.l"
 ;
 	YY_BREAK
 case 2:
 /* rule 2 can match eol */
 YY_RULE_SETUP
-#line 15 "sample3.l"
+#line 15 "simple_sentence_word.l"
 {
     state = LOOKUP;
 }
@@ -764,7 +764,7 @@ YY_RULE_SETUP
 case 3:
 /* rule 3 can match eol */
 YY_RULE_SETUP
-#line 18 "sample3.l"
+#line 18 "simple_sentence_word.l"
 {
     state = LOOKUP;
     return 0;
@@ -772,56 +772,56 @@ YY_RULE_SETUP
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 22 "sample3.l"
+#line 22 "simple_sentence_word.l"
 {
     state = VERB;
 }
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 25 "sample3.l"
+#line 25 "simple_sentence_word.l"
 {
     state = ADJECTIVE;
 }
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 28 "sample3.l"
+#line 28 "simple_sentence_word.l"
 {
     state = ADVERB;
 }
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 31 "sample3.l"
+#line 31 "simple_sentence_word.l"
 {
     state = NOUN;
 }
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 34 "sample3.l"
+#line 34 "simple_sentence_word.l"
 {
     state = PREPOSITION;
 }
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 37 "sample3.l"
+#line 37 "simple_sentence_word.l"
 {
     state = PRONOUN;
 }
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 40 "sample3.l"
+#line 40 "simple_sentence_word.l"
 {
     state = CONJUNCTION;
 }
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 43 "sample3.l"
+#line 43 "simple_sentence_word.l"
 {
     if (state != LOOKUP) {
         add_word(state, yytext);
@@ -856,7 +856,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 74 "sample3.l"
+#line 74 "simple_sentence_word.l"
 ECHO;
 	YY_BREAK
 #line 863 "lex.yy.c"
@@ -1859,7 +1859,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 74 "sample3.l"
+#line 74 "simple_sentence_word.l"
 
 
 

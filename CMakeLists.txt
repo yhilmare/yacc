@@ -6,7 +6,7 @@ link_directories(./src/libs/sample1/build ./src/libs/sample2/build ./src/libs/sa
 
 add_executable(yacc ${SRC_DIR})
 
-target_link_libraries(yacc -l20200920_1 -l20200920 -l20200925 -ll)
+target_link_libraries(yacc -lsimple_sentence -lsimple_lex_world_list -lsimple_lex -ll)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})

@@ -463,8 +463,8 @@ int yy_flex_debug = 0;
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 "20200920-1.l"
-#line 2 "20200920-1.l"
+#line 1 "simple_lex_world_list.l"
+#line 2 "simple_lex_world_list.l"
     #include<stdlib.h>
     /**
     定义带符号表的单词识别程序
@@ -668,7 +668,7 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
     
-#line 21 "20200920-1.l"
+#line 21 "simple_lex_world_list.l"
 
 #line 674 "lex.yy.c"
 
@@ -756,69 +756,69 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 22 "20200920-1.l"
+#line 22 "simple_lex_world_list.l"
 ;
 	YY_BREAK
 case 2:
 /* rule 2 can match eol */
 YY_RULE_SETUP
-#line 23 "20200920-1.l"
+#line 23 "simple_lex_world_list.l"
 {
     state = LOOKUP;
 }
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 26 "20200920-1.l"
+#line 26 "simple_lex_world_list.l"
 {
     state = VERB;
 }
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 29 "20200920-1.l"
+#line 29 "simple_lex_world_list.l"
 {
     state = ADJ;
 }
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 32 "20200920-1.l"
+#line 32 "simple_lex_world_list.l"
 {
     state = ADV;
 }
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 35 "20200920-1.l"
+#line 35 "simple_lex_world_list.l"
 {
     state = NOUN;
 }
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 38 "20200920-1.l"
+#line 38 "simple_lex_world_list.l"
 {
     state = PREF;
 }
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 41 "20200920-1.l"
+#line 41 "simple_lex_world_list.l"
 {
     state = PRON;
 }
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 44 "20200920-1.l"
+#line 44 "simple_lex_world_list.l"
 {
     state = CONJ;
 }
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 47 "20200920-1.l"
+#line 47 "simple_lex_world_list.l"
 {
     if (state != LOOKUP) {
         add_word(state, yytext);
@@ -846,7 +846,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 71 "20200920-1.l"
+#line 71 "simple_lex_world_list.l"
 ECHO;
 	YY_BREAK
 #line 853 "lex.yy.c"
@@ -1849,7 +1849,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 71 "20200920-1.l"
+#line 71 "simple_lex_world_list.l"
 
 
 

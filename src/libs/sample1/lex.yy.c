@@ -455,8 +455,8 @@ int yy_flex_debug = 0;
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 "20200920.l"
-#line 2 "20200920.l"
+#line 1 "simple_lex.l"
+#line 2 "simple_lex.l"
     /*
     测试用的lex文件
     */
@@ -642,7 +642,7 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
     
-#line 6 "20200920.l"
+#line 6 "simple_lex.l"
 
 #line 648 "lex.yy.c"
 
@@ -729,23 +729,23 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 7 "20200920.l"
+#line 7 "simple_lex.l"
 ;
 	YY_BREAK
 case 2:
-#line 9 "20200920.l"
+#line 9 "simple_lex.l"
 case 3:
-#line 10 "20200920.l"
+#line 10 "simple_lex.l"
 case 4:
 YY_RULE_SETUP
-#line 10 "20200920.l"
+#line 10 "simple_lex.l"
 {
     printf("I love %s", yytext);
 }
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 13 "20200920.l"
+#line 13 "simple_lex.l"
 {
     printf("input msg is %s", yytext);
 }
@@ -753,12 +753,12 @@ YY_RULE_SETUP
 case 6:
 /* rule 6 can match eol */
 YY_RULE_SETUP
-#line 16 "20200920.l"
+#line 16 "simple_lex.l"
 ECHO;
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 17 "20200920.l"
+#line 17 "simple_lex.l"
 ECHO;
 	YY_BREAK
 #line 765 "lex.yy.c"
@@ -1758,7 +1758,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 17 "20200920.l"
+#line 17 "simple_lex.l"
 
 
 

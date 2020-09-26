@@ -18,8 +18,5 @@ extern "C" {
 
 int main(int argc, char ** args) {
     cout << "Hello, world" << endl;
-    cout << argc << endl;
-    char **fileList = args + 1;
-    cout << args[0] << endl;
     return 0;
 }

@@ -88,7 +88,7 @@
 
 
 /* Copy the first part of user declarations.  */
-#line 1 "grammar.l"
+#line 1 "simple_sentence_gra.l"
 
     /**
     语法规则文件
@@ -1324,14 +1324,14 @@ yyreduce:
   switch (yyn)
     {
         case 2:
-#line 11 "grammar.l"
+#line 11 "simple_sentence_gra.l"
     {
     printf("parse a simple sentence.\n");
 }
     break;
 
   case 3:
-#line 14 "grammar.l"
+#line 14 "simple_sentence_gra.l"
     {
             printf("parse a compound_sentence.\n");
         }
@@ -1553,7 +1553,7 @@ yyreturn:
 }
 
 
-#line 37 "grammar.l"
+#line 37 "simple_sentence_gra.l"
 
 
 extern FILE *yyin;

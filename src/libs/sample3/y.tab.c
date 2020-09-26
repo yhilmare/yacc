@@ -1556,8 +1556,6 @@ yyreturn:
 #line 37 "simple_sentence_gra.l"
 
 
-extern FILE *yyin;
-
 void grammar_parse() {
     yyparse();
 }

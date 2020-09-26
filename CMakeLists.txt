@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.0.0)
 project(yacc VERSION 0.1.0)
-
+execute_process(COMMAND ./build.sh build WORKING_DIRECTORY ../)
 aux_source_directory(./src SRC_DIR)
 link_directories(./src/libs/sample1/build ./src/libs/sample2/build ./src/libs/sample3/build)
 

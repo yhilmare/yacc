@@ -1,3 +1,6 @@
 /build
 **/.vscode
 **/build
+**/libs/**/lex.yy.c
+**/libs/**/y.tab.c
+**/libs/**/y.tab.h

@@ -2,7 +2,7 @@
 该仓库用于存放和记录笔者进行LEX和YACC的学习记录，所有的程序代码以及踩坑的记录都会在这里详细给出
 
 ## 如何运行
-克隆工程到本地，然后建立`build`目录用于存放编译后的产出物，在`build`目录中运行`cmake`指令产生makefile，随后再进行编译。注意：在编译最外层的main.cpp时需要保证`src/libs`下的所有包都被编译成动态库，否则编译可能会失败。
+克隆工程到本地，然后建立`build`目录用于存放编译后的产出物，在`build`目录中运行`cmake`指令产生makefile，随后再进行编译。
 
 ```Shell
 yh-swjtudeMacBook-Pro:build yh_swjtu$ cmake ..

@@ -107,7 +107,7 @@ int look_up(char *w) {
     struct word *p = p_head;
     if (p != NULL) {
         p = p->next;
-    }else {
+    } else {
         return LOOKUP;
     }
     for(; p; p = p->next) {

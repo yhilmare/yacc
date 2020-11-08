@@ -21,7 +21,6 @@ extern "C" {
 }
 
 int main(int argc, char ** args) {
-    cout << "Hello, world" << endl;
     word_count_func(argc, args);
     return 0;
 }

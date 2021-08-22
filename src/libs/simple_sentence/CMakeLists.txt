@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.0.0)
 project(simple_sentence VERSION 0.1.0)
 
-execute_process(COMMAND yacc -d simple_sentence_gra.l COMMAND lex simple_sentence_word.l WORKING_DIRECTORY ../)
+execute_process(COMMAND yacc -d simple_sentence_gra.y COMMAND lex simple_sentence_word.l WORKING_DIRECTORY ../)
 
 aux_source_directory(./ SRC_DIR)
 

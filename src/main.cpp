@@ -3,24 +3,17 @@ using namespace std;
  
 extern "C" {
     /**
-     * 最简单的词法分析工具
-    */
-    void simple_example();
-    /**
      * 带词汇表的词法分析工具
     */
-    void lex_parser_with_word_list();
+    void lex_parser_with_symbol_table();
     /**
-     * 语法分析功能的工具
+     * 带有词法分析器的语法分析工具
     */
-    void grammar_parse();
-    /**
-     * 统计词频的词法分析工具
-    */
-    void word_count_func(int, char **);
+   void grammar_parse();
 }
 
 int main(int argc, char ** args) {
-    word_count_func(argc, args);
+    cout << "Begin..." << endl;
+    grammar_parse();
     return 0;
 }

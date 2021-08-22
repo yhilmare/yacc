@@ -9,7 +9,7 @@
     yylval = atoi(yytext);
     return NUMBER;
 }
-\t ;
+[ \t] ;
 \n {
     return 0;
 }

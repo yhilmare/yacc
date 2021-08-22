@@ -11,62 +11,66 @@
     int look_up(char *w);
 %}
 %%
+
 [\t ] ;
+
 \n {
     state = LOOKUP;
 }
+
 ;\n {
     state = LOOKUP;
     return 0;
 }
+
 ^verb {
     state = VERB;
 }
+
 ^adj {
     state = ADJECTIVE;
 }
+
 ^adv {
     state = ADVERB;
 }
+
 ^noun {
     state = NOUN;
 }
+
 ^pref {
     state = PREPOSITION;
 }
+
 ^pron {
     state = PRONOUN;
 }
+
 ^conj {
     state = CONJUNCTION;
 }
+
 [a-zA-Z]+ {
     if (state != LOOKUP) {
         add_word(state, yytext);
     }else {
         int tmp_state = look_up(yytext);
         if (tmp_state == VERB) {
-            printf("input str \"%s\" is a verb\n", yytext);
             return VERB;
-        }else if (tmp_state == ADJECTIVE) {
-            printf("input str \"%s\" is a adj\n", yytext);
+        } else if (tmp_state == ADJECTIVE) {
             return ADJECTIVE;
-        }else if (tmp_state == ADVERB) {
-            printf("input str \"%s\" is a adv\n", yytext);
+        } else if (tmp_state == ADVERB) {
             return ADVERB;
-        }else if (tmp_state == NOUN) {
-            printf("input str \"%s\" is a noun\n", yytext);
+        } else if (tmp_state == NOUN) {
             return NOUN;
-        }else if (tmp_state == PREPOSITION) {
-            printf("input str \"%s\" is a pref\n", yytext);
+        } else if (tmp_state == PREPOSITION) {
             return PREPOSITION;
-        }else if (tmp_state == PRONOUN) {
-            printf("input str \"%s\" is a pron\n", yytext);
+        } else if (tmp_state == PRONOUN) {
             return PRONOUN;
-        }else if (tmp_state == CONJUNCTION) {
-            printf("input str \"%s\" is a conj\n", yytext);
+        } else if (tmp_state == CONJUNCTION) {
             return CONJUNCTION;
-        }else {
+        } else {
             printf("input str \"%s\" is undefined\n", yytext);
         }
     }

@@ -36,8 +36,12 @@ preb_phrase: PREPOSITION NOUN
     ;
 %%
 
+extern FILE *yyin;
+
 void grammar_parse() {
-    yyparse();
+    do {
+        yyparse();
+    } while (!feof(yyin));
 }
 
 int yyerror(char *msg) {

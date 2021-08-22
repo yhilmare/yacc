@@ -1,8 +1,8 @@
 %{
-    #include<stdlib.h>
-    /**
-    定义带符号表的单词识别程序
+    /*
+    通过符号表的方式动态地定义那些是动词，哪些是名词，这样就不用将所有的词法定义写死在lex中
     */
+    #include<stdlib.h>
     enum {
         LOOKUP = 0,
         VERB,
@@ -14,36 +14,45 @@
         CONJ
     };
     int state;
-
     int add_word(int type, char *word);
     int look_up(char *word);
 %}
 %%
+
 [\t ] ;
+
 \n {
     state = LOOKUP;
 }
+
 ^verb {
     state = VERB;
 }
+
 ^adj {
     state = ADJ;
 }
+
 ^adv {
     state = ADV;
 }
+
 ^noun {
     state = NOUN;
 }
+
 ^pref {
     state = PREF;
 }
+
 ^pron {
     state = PRON;
 }
+
 ^conj {
     state = CONJ;
 }
+
 [a-zA-Z]+ {
     if (state != LOOKUP) {
         add_word(state, yytext);
@@ -51,19 +60,19 @@
         int tmp_state = look_up(yytext);
         if (tmp_state == VERB) {
             printf("input str \"%s\" is a verb\n", yytext);
-        }else if (tmp_state == ADJ) {
+        } else if (tmp_state == ADJ) {
             printf("input str \"%s\" is a adj\n", yytext);
-        }else if (tmp_state == ADV) {
+        } else if (tmp_state == ADV) {
             printf("input str \"%s\" is a adv\n", yytext);
-        }else if (tmp_state == NOUN) {
+        } else if (tmp_state == NOUN) {
             printf("input str \"%s\" is a noun\n", yytext);
-        }else if (tmp_state == PREF) {
+        } else if (tmp_state == PREF) {
             printf("input str \"%s\" is a pref\n", yytext);
-        }else if (tmp_state == PRON) {
+        } else if (tmp_state == PRON) {
             printf("input str \"%s\" is a pron\n", yytext);
-        }else if (tmp_state == CONJ) {
+        } else if (tmp_state == CONJ) {
             printf("input str \"%s\" is a conj\n", yytext);
-        }else {
+        } else {
             printf("input str \"%s\" is undefined\n", yytext);
         }
     }
@@ -115,6 +124,6 @@ int look_up(char *w) {
     return LOOKUP;
 }
 
-void lex_parser_with_word_list() {
+void lex_parser_with_symbol_table() {
     yylex();
 }

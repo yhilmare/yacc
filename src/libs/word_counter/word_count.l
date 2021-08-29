@@ -12,14 +12,17 @@
 word [^ \t\n]+
 eol \n
 %%
+
 {word} {
     word_count ++;
     char_count += yyleng;
 }
+
 {eol} {
     line_count ++;
     char_count ++;
 }
+
 . char_count ++;
 %%
 
@@ -28,7 +31,7 @@ void word_count_func(int argc, char **args) {
     if (argc == 1) {
         file_count = 0;
         yylex();
-    }else {
+    } else {
         file_count = argc - 1;
         file_ptr = args + 1;
     }
@@ -60,7 +63,7 @@ int yywrap() {
         file = fopen(file_name, "r");
         if (!file) {
             fprintf(stderr, "fail to open %s\n", file_name);
-        }else {
+        } else {
             break;
         }
     }

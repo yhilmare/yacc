@@ -19,10 +19,11 @@ extern "C" {
   void word_count_func(int, char**);
   int simple_word_count(int, char**);
   void parse_command_line();
+  void calculate();
 }
 
 int main(int argc, char ** args) {
-    cout << "Begin..." << endl;
-    parse_command_line();
+    cout << "begin..." << endl;
+    calculate();
     return 0;
 }

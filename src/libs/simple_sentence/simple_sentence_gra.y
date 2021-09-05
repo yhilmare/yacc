@@ -3,6 +3,7 @@
     语法规则文件
     */
     #include<stdio.h>
+    void yyerror(char *);
 %}
 
 %token NOUN PRONOUN VERB ADVERB ADJECTIVE PREPOSITION CONJUNCTION
@@ -36,14 +37,14 @@ preb_phrase: PREPOSITION NOUN
     ;
 %%
 
+void yyerror(char *msg) {
+    fprintf(stderr, "error is %s\n", msg);
+}
+
 extern FILE *yyin;
 
 void grammar_parse() {
     do {
         yyparse();
     } while (!feof(yyin));
-}
-
-int yyerror(char *msg) {
-    fprintf(stderr, "error is %s\n", msg);
 }

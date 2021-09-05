@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.0.0)
 project(yacc VERSION 0.1.0)
 execute_process(COMMAND ./build.sh build WORKING_DIRECTORY ../)
 aux_source_directory(./src SRC_DIR)
-link_directories(./src/libs/symbol_table/build ./src/libs/lex_status/build ./src/libs/simple_sentence/build ./src/libs/single_file_word_counter/build ./src/libs/word_counter/build)
+link_directories(./src/libs/symbol_table/build ./src/libs/lex_status/build ./src/libs/simple_sentence/build ./src/libs/single_file_word_counter/build ./src/libs/multi_file_word_counter/build)
 
 add_executable(yacc ${SRC_DIR})
 
